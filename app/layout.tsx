@@ -6,7 +6,7 @@ const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3001'),
+  metadataBase: new URL('https://sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site'),
   title: 'Sharath Chandra — GenAI & Automation Engineer',
   description:
     'Portfolio of Donthula Sharath Chandra, a software engineer building GenAI systems, workflow automation, backend APIs, and dependable production solutions.',
