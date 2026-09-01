@@ -9,6 +9,11 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/d-sharath-chandra',
 };
 
+// ADDING A PROJECT
+// 1. Copy one complete object inside this array.
+// 2. Change its number, title, text, image, stack, highlights, status, and links.
+// 3. Save the project screenshot inside public/projects and use its path below.
+// Every project automatically uses the same responsive card size—no layout setting is needed.
 export const projects = [
   {
     number: '01',
@@ -22,7 +27,6 @@ export const projects = [
     image: '/projects/ipoinfo.png',
     year: '2026',
     status: 'Live product',
-    layout: 'featured',
     links: [
       { label: 'Live website', href: 'https://ipoinfo.online', type: 'live' },
       { label: 'Source code', href: 'https://github.com/sharath2525/Ipoinfo', type: 'code' },
@@ -40,7 +44,6 @@ export const projects = [
     image: '/projects/claude-limit-guard.png',
     year: '2026',
     status: 'Chrome Web Store',
-    layout: 'tall',
     links: [
       { label: 'Chrome store', href: 'https://chromewebstore.google.com/detail/claude-limit-guard/njmlhjabppkblfpcepmikdnejoehdgki', type: 'live' },
       { label: 'Source code', href: 'https://github.com/sharath2525/Claude-Limit-Guard', type: 'code' },
@@ -58,7 +61,6 @@ export const projects = [
     image: '/projects/ai-context-capsule.png',
     year: '2026',
     status: 'Open source',
-    layout: 'wide',
     links: [
       { label: 'Source code', href: 'https://github.com/sharath2525/AIContextCapsule', type: 'code' },
     ],
@@ -75,7 +77,6 @@ export const projects = [
     image: '/projects/trading-bot-architecture.png',
     year: '2026',
     status: 'Open source',
-    layout: 'wide',
     links: [
       { label: 'Source code', href: 'https://github.com/sharath2525/Trading-bot', type: 'code' },
     ],
@@ -92,7 +93,6 @@ export const projects = [
     image: '/projects/iq-quiz.png',
     year: '2026',
     status: 'Live demo',
-    layout: 'standard',
     links: [
       { label: 'Live demo', href: 'https://v0-iq-quiz-base-app.vercel.app', type: 'live' },
       { label: 'Source code', href: 'https://github.com/sharath2525/v0-iq-quiz-base-app', type: 'code' },

@@ -192,7 +192,7 @@ export default function Home() {
           </div>
           <div className="projects-bento">
             {projects.map((project) => (
-              <article className={`project-showcase project-layout-${project.layout}`} key={project.title}>
+              <article className="project-showcase" key={project.title}>
                 <div className="project-media">
                   <img src={project.image} alt={`${project.title} interface preview`} loading="lazy" />
                   <div className="project-media-shade" />
