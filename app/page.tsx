@@ -4,9 +4,11 @@ import {
   BookOpen,
   Bot,
   BriefcaseBusiness,
-  CircleCheck,
+  Code2,
   Database,
   Download,
+  ExternalLink,
+  FolderKanban,
   GraduationCap,
   Mail,
   MapPin,
@@ -30,6 +32,15 @@ const focusAreas = [
   { icon: ShieldCheck, label: 'Production support', detail: 'RCA, monitoring, GxP operations' },
 ];
 
+const heroTechnologies = [
+  { name: 'Python', icon: '/skills/python.svg' },
+  { name: 'LangChain', icon: '/skills/langchain.svg' },
+  { name: 'n8n', icon: '/skills/n8n.svg' },
+  { name: 'Docker', icon: '/skills/docker.svg' },
+  { name: 'Anthropic', icon: '/skills/anthropic.svg' },
+  { name: 'AWS', icon: '/skills/amazonwebservices.svg' },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
@@ -41,6 +52,7 @@ export default function Home() {
           <div className="nav-links" aria-label="Section links">
             <a href="#about">About</a>
             <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
           </div>
@@ -87,6 +99,13 @@ export default function Home() {
               <span className="orbit orbit-one" />
               <span className="orbit orbit-two" />
               <span className="orbit-core">AI</span>
+              <div className="hero-tech-icons">
+                {heroTechnologies.map((technology) => (
+                  <span className="hero-tech-icon" key={technology.name}>
+                    <img src={technology.icon} alt="" />
+                  </span>
+                ))}
+              </div>
             </div>
             <div className="panel-content">
               <p className="panel-label">Current system state</p>
@@ -158,29 +177,47 @@ export default function Home() {
         <div className="site-shell">
           <div className="section-heading-row">
             <div>
-              <p className="section-label">03 / Selected systems</p>
-              <h2>Work in progress.<br />Built with intent.</h2>
+              <p className="section-label">03 / Featured projects</p>
+              <h2>Real products.<br />Real source code.</h2>
             </div>
-            <p className="section-note">
-              Initial case-study structure from the resume. Repositories, demos,
-              screenshots, and outcomes can drop in when the project files arrive.
-            </p>
+            <div className="projects-intro">
+              <p className="section-note">
+                A growing collection of shipped products, browser extensions,
+                AI systems, and experiments—each connected to its real repository.
+              </p>
+              <a className="text-link" href="https://github.com/sharath2525" target="_blank" rel="noreferrer">
+                View all repositories <ArrowUpRight size={16} aria-hidden="true" />
+              </a>
+            </div>
           </div>
-          <div className="projects-grid">
+          <div className="projects-bento">
             {projects.map((project) => (
-              <article className={`project-card project-${project.tone}`} key={project.title}>
-                <div className="project-topline">
-                  <span>{project.number}</span>
-                  <span>{project.label}</span>
+              <article className={`project-showcase project-layout-${project.layout}`} key={project.title}>
+                <div className="project-media">
+                  <img src={project.image} alt={`${project.title} interface preview`} loading="lazy" />
+                  <div className="project-media-shade" />
+                  <div className="project-index"><span>{project.number}</span><span>{project.year}</span></div>
+                  <span className="project-live-state">{project.status}</span>
                 </div>
-                <h3>{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <ul className="tag-list" aria-label={`${project.title} technologies`}>
-                  {project.stack.map((item) => <li key={item}>{item}</li>)}
-                </ul>
-                <div className="project-status">
-                  <CircleCheck size={16} aria-hidden="true" />
-                  <span>{project.status}</span>
+                <div className="project-info">
+                  <p className="project-label"><FolderKanban size={15} aria-hidden="true" /> {project.label}</p>
+                  <h3>{project.title}</h3>
+                  <p className="project-tagline">{project.tagline}</p>
+                  <p className="project-description">{project.description}</p>
+                  <ul className="project-highlights" aria-label={`${project.title} highlights`}>
+                    {project.highlights.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                  <ul className="tag-list" aria-label={`${project.title} technologies`}>
+                    {project.stack.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                  <div className="project-actions">
+                    {project.links.map((link) => (
+                      <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
+                        {link.type === 'code' ? <Code2 size={16} aria-hidden="true" /> : <ExternalLink size={16} aria-hidden="true" />}
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}
@@ -199,11 +236,21 @@ export default function Home() {
           </div>
           <div className="skills-table">
             {skillGroups.map((group) => (
-              <article className="skill-row" key={group.title}>
-                <span className="skill-number">{group.number}</span>
-                <h3>{group.title}</h3>
-                <div className="skill-cloud">
-                  {group.skills.map((skill) => <span key={skill}>{skill}</span>)}
+              <article className="skill-group-card" key={group.title}>
+                <div className="skill-group-head">
+                  <span className="skill-number">{group.number}</span>
+                  <div>
+                    <h3>{group.title}</h3>
+                    <p>{group.description}</p>
+                  </div>
+                </div>
+                <div className="skill-logo-grid">
+                  {group.skills.map((skill) => (
+                    <div className="skill-logo" key={skill.name}>
+                      <div className="skill-logo-image"><img src={skill.icon} alt="" /></div>
+                      <span>{skill.name}</span>
+                    </div>
+                  ))}
                 </div>
               </article>
             ))}
