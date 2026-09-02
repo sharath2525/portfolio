@@ -1,106 +1,106 @@
-# Sharath Chandra — GenAI Engineering Portfolio
+# Donthula Sharath Chandra
 
-[![Portfolio](public/og.png)](https://sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site)
+### Software Engineer | GenAI Engineer & AI Automation Builder
 
-A production-focused portfolio showcasing applied generative AI, RAG applications, agentic workflows, browser extensions, automation, and backend engineering.
+[Portfolio](https://sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site) · [LinkedIn](https://linkedin.com/in/d-sharath-chandra) · [GitHub](https://github.com/sharath2525) · [Email](mailto:donthulasharath25@gmail.com)
 
-[View the live portfolio](https://sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site) · [GitHub profile](https://github.com/sharath2525) · [LinkedIn](https://linkedin.com/in/d-sharath-chandra)
+![Sharath Chandra's GenAI engineering portfolio](public/og.png)
 
-## Focus
+## About me
 
-- Applied GenAI products built around real user problems
+I am a software engineer based in Hyderabad, India, focused on building useful generative AI products, intelligent automation, and dependable software systems. I enjoy turning real problems into practical tools—from AI-assisted workflows and browser extensions to fintech utilities and agentic systems.
+
+At Cognizant, I support healthcare applications in a regulated production environment. My work combines incident investigation, application monitoring, data validation, release support, and automation. I am now growing toward GenAI engineering roles where I can combine this production experience with LLM applications, retrieval-augmented generation, agents, and workflow orchestration.
+
+## What I build
+
+- Applied GenAI products designed around real user problems
 - Retrieval-augmented generation and LLM integrations
 - Agentic workflows and AI-assisted automation
-- Python, TypeScript, APIs, and workflow orchestration
-- Production reliability, observability, and safe delivery
+- Browser extensions and productivity tools
+- APIs, data workflows, and production-ready software
 
-## Featured work
+## Featured projects
 
-- **IPO Fast Check** — Mobile-first Indian IPO allotment and market-information utility
-- **Claude Limit Guard** — Privacy-conscious browser extension for Claude usage visibility
-- **AI Context Capsule** — Reusable context and structured summaries across AI conversations
-- **Hyperliquid AI Trading Agent** — Technical-signal pipeline with a structured AI analysis gate
-- **IQ Quiz Contest** — Open-source wallet-aware Base mini app with timed logic challenges
+### IPO Fast Check
 
-Each project card links to its live experience, source repository, or store listing when available.
+A mobile-first product for checking Indian IPO allotment status and following live GMP, price bands, dates, lot sizes, and estimated listing prices.
 
-## Technology
+**Built with:** Next.js, TypeScript, Cheerio, server APIs, and Vercel
 
-- React 19 and TypeScript
-- Vinext and Vite
-- Nitro adapter for Vercel
-- CSS with responsive layouts and accessible interaction states
-- Lucide icons
-- Open Graph, structured data, robots, and sitemap metadata
+[Live website](https://ipoinfo.online) · [Source code](https://github.com/sharath2525/Ipoinfo)
 
-## Local development
+### Claude Limit Guard
 
-Requires Node.js 22.13 or newer.
+A privacy-conscious Chrome and Edge extension that displays Claude session and weekly usage limits with reset countdowns, without trackers, storage, or broad browser permissions.
 
-```bash
-npm install
-npm run dev
-```
+**Built with:** JavaScript, Manifest V3, Claude API, Chrome, and Edge
 
-Production checks:
+[Chrome Web Store](https://chromewebstore.google.com/detail/claude-limit-guard/njmlhjabppkblfpcepmikdnejoehdgki) · [Source code](https://github.com/sharath2525/Claude-Limit-Guard)
 
-```bash
-npm run typecheck
-npm run lint
-npm run build
-```
+### AI Context Capsule
 
-Vercel-compatible build:
+A Chrome extension that captures ChatGPT and Claude conversations, creates structured summaries, and carries reusable context into new conversations.
 
-```bash
-$env:NITRO_PRESET="vercel" # PowerShell
-npm run build:vercel
-```
+**Built with:** JavaScript, Manifest V3, LLM APIs, Chrome Storage, and PDF export
 
-On macOS or Linux:
+[Source code](https://github.com/sharath2525/AIContextCapsule)
 
-```bash
-NITRO_PRESET=vercel npm run build:vercel
-```
+### Hyperliquid AI Trading Agent
 
-## Content updates
+A perpetual-futures research and execution system where technical signals determine direction and risk, while Claude provides structured confluence analysis before qualified trades.
 
-Portfolio records are centralized in `app/content.ts`:
+**Built with:** Python, Claude, Hyperliquid, technical analysis, and risk controls
 
-- Profile and contact links
-- Projects
-- Skill groups and logos
-- Experience
-- Education
-- Publication
+[Source code](https://github.com/sharath2525/Trading-bot)
 
-Images and documents live under `public/`. Layout and page copy are in `app/page.tsx`, metadata is in `app/layout.tsx`, and responsive styling is in `app/globals.css`.
+### IQ Quiz Contest
 
-For detailed maintenance instructions, see [`docs/PORTFOLIO-MAINTENANCE.md`](docs/PORTFOLIO-MAINTENANCE.md).
+A mobile-focused IQ quiz mini app with multiple categories, wallet-aware profiles, Base payments, timed challenges, and detailed answer breakdowns.
 
-## Deployment
+**Built with:** Next.js, TypeScript, Base, Farcaster, and Wagmi
 
-The repository includes a Vercel build adapter and secure response headers in `vercel.json`. See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for the GitHub, Vercel, and GoDaddy custom-domain checklist.
+[Source code](https://github.com/sharath2525/v0-iq-quiz-base-app)
 
-Set this public environment variable in Vercel after connecting the final domain:
+## Skills
 
-```text
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
-```
+- **AI systems:** Anthropic Claude, Google Gemini, LangChain, Hugging Face, LLM integrations, and RAG concepts
+- **Automation and backend:** Python, Flask, Streamlit, n8n, PowerShell, and Power Automate
+- **Software and data:** JavaScript, TypeScript, React, Next.js, .NET, Oracle SQL, REST APIs, and Docker
+- **Production reliability:** Linux, AWS, Git, Jira, ServiceNow, Dynatrace, incident response, testing, and release support
 
-Never commit `.env` files, API keys, access tokens, private keys, or service credentials. The included `.gitignore` excludes common secret and local-state files.
+## Experience
 
-## Project structure
+### Jr. Software Engineer — Cognizant Technology Solutions
 
-```text
-app/                   Portfolio page, content, metadata, and styles
-public/projects/       Project screenshots
-public/skills/         Skill and technology logos
-docs/                  Maintenance and deployment guides
-vite.config.ts         Sites and Vercel build adapters
-vercel.json            Vercel build and security-header configuration
-```
+**Hyderabad, India · October 2024 — Present**
 
-## License
+- Support healthcare applications in a GxP-regulated production environment.
+- Resolve P1–P3 incidents, service requests, and problem tickets while maintaining SLA discipline.
+- Use Dynatrace, application logs, alerts, transaction flows, and Oracle SQL to diagnose issues and validate data.
+- Coordinate upgrades and releases, perform testing, and support post-deployment monitoring.
+- Build PowerShell and Power Automate workflows that reduce repetitive operational work.
+- Apply ChatGPT and Microsoft Copilot to log summarization, root-cause documentation, and first-level triage experiments.
 
-The source and visual design are provided for this personal portfolio. No reuse license is granted unless the owner provides one separately.
+## Education
+
+**Bachelor of Technology in Information Technology**
+
+Vardhaman College of Engineering, Hyderabad · 2020–2024 · CGPA 7.03
+
+## Publication
+
+**Personalized Mental Health Analysis Using AI**
+
+IEEE ADICS International Conference · 2024
+
+## Current direction
+
+I am interested in opportunities as a **GenAI Engineer**, **AI Automation Engineer**, or **Applied AI Engineer**, where I can build useful AI systems and help operate them reliably in production.
+
+## Contact
+
+- Email: [donthulasharath25@gmail.com](mailto:donthulasharath25@gmail.com)
+- LinkedIn: [linkedin.com/in/d-sharath-chandra](https://linkedin.com/in/d-sharath-chandra)
+- GitHub: [github.com/sharath2525](https://github.com/sharath2525)
+- Portfolio: [View my portfolio](https://sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site)

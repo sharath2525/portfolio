@@ -1,5 +1,7 @@
 # Sharath Chandra — Internal Portfolio Maintenance Guide
 
+> Internal reference: local setup, content editing, testing, publishing, and maintenance instructions are kept here instead of in the public `README.md`.
+
 This repository contains the source for Sharath Chandra's personal portfolio.
 
 Live website: [sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site](https://sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site)
