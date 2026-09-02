@@ -12,10 +12,10 @@ import {
   GraduationCap,
   Mail,
   MapPin,
-  Phone,
   ShieldCheck,
   Workflow,
 } from 'lucide-react';
+import Image from 'next/image';
 import {
   education,
   experience,
@@ -24,26 +24,45 @@ import {
   publication,
   skillGroups,
 } from './content';
+import { siteUrl } from './site-config';
 
 const focusAreas = [
-  { icon: Bot, label: 'GenAI systems', detail: 'RAG, agents, LLM integration' },
-  { icon: Workflow, label: 'Automation', detail: 'n8n, PowerShell, Power Automate' },
-  { icon: Database, label: 'Backend & data', detail: 'Python, Flask, APIs, Oracle SQL' },
-  { icon: ShieldCheck, label: 'Production support', detail: 'RCA, monitoring, GxP operations' },
+  { icon: Bot, label: 'RAG & LLM apps', detail: 'Grounded generation, retrieval, LLM APIs' },
+  { icon: Workflow, label: 'Agentic workflows', detail: 'Tool use, orchestration, evaluation loops' },
+  { icon: Database, label: 'AI automation', detail: 'Python, n8n, APIs, structured data flows' },
+  { icon: ShieldCheck, label: 'Production reliability', detail: 'Observability, RCA, safe delivery' },
 ];
 
 const heroTechnologies = [
   { name: 'Python', icon: '/skills/python.svg' },
   { name: 'LangChain', icon: '/skills/langchain.svg' },
   { name: 'n8n', icon: '/skills/n8n.svg' },
-  { name: 'Docker', icon: '/skills/docker.svg' },
   { name: 'Anthropic', icon: '/skills/anthropic.svg' },
-  { name: 'AWS', icon: '/skills/amazonwebservices.svg' },
+  { name: 'Gemini', icon: '/skills/googlegemini.svg' },
+  { name: 'Docker', icon: '/skills/docker.svg' },
 ];
+
+const structuredProfile = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  url: siteUrl,
+  email: `mailto:${profile.email}`,
+  jobTitle: profile.role,
+  description: `${profile.role} building toward ${profile.targetRole} roles through applied AI products and production engineering.`,
+  address: { '@type': 'PostalAddress', addressLocality: 'Hyderabad', addressCountry: 'IN' },
+  sameAs: [profile.github, profile.linkedin],
+  knowsAbout: ['Generative AI', 'Retrieval-Augmented Generation', 'AI agents', 'LLM APIs', 'Python', 'n8n', 'Production reliability'],
+};
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-background text-foreground">
+    <main id="main-content">
+      <a className="skip-link" href="#about">Skip to portfolio content</a>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredProfile) }}
+      />
       <header className="site-shell" id="top">
         <nav className="topbar" aria-label="Primary navigation">
           <a className="wordmark" href="#top" aria-label="Sharath Chandra home">
@@ -57,7 +76,7 @@ export default function Home() {
             <a href="#contact">Contact</a>
           </div>
           <a className="availability" href={`mailto:${profile.email}`}>
-            <span aria-hidden="true" /> Open to opportunities
+            <span aria-hidden="true" /> Open to GenAI roles
           </a>
         </nav>
 
@@ -70,12 +89,12 @@ export default function Home() {
               Chandra<span className="accent-mark">↗</span>
             </h1>
             <p className="hero-role">
-              Jr. Software Engineer · GenAI &amp; Automation Builder
+              GenAI Engineer · AI Automation Builder
             </p>
             <p className="hero-intro">
-              I turn production problems into dependable systems—combining
-              incident discipline, backend APIs, automation, and practical
-              generative AI.
+              I build applied GenAI products—RAG assistants, agentic workflows,
+              LLM-powered tools, and reliable AI automation backed by production
+              engineering discipline.
             </p>
             <div className="hero-actions">
               <a className="button button-dark" href="#work">
@@ -102,19 +121,19 @@ export default function Home() {
               <div className="hero-tech-icons">
                 {heroTechnologies.map((technology) => (
                   <span className="hero-tech-icon" key={technology.name}>
-                    <img src={technology.icon} alt="" />
+                    <Image src={technology.icon} alt="" width={25} height={25} />
                   </span>
                 ))}
               </div>
             </div>
             <div className="panel-content">
-              <p className="panel-label">Current system state</p>
-              <p className="panel-status">Building intelligent automation</p>
+              <p className="panel-label">Current focus</p>
+              <p className="panel-status">Shipping applied GenAI systems</p>
               <div className="signal-list">
-                <span>RAG / LLM APIs</span>
-                <span>n8n / Power Automate</span>
-                <span>Python / Flask</span>
-                <span>Production Support</span>
+                <span>RAG / LLM apps</span>
+                <span>Agentic workflows</span>
+                <span>Python / n8n</span>
+                <span>Production reliability</span>
               </div>
               <p className="panel-location">
                 <MapPin size={15} aria-hidden="true" /> Hyderabad · UTC+5:30
@@ -124,9 +143,9 @@ export default function Home() {
         </section>
 
         <div className="hero-footer" aria-label="Highlights">
+          <p><strong>03</strong> Applied AI products</p>
+          <p><strong>05</strong> Featured builds</p>
           <p><strong>01+</strong> Years in enterprise software</p>
-          <p><strong>08</strong> GenAI &amp; automation builds</p>
-          <p><strong>24/7</strong> Production-first mindset</p>
         </div>
       </header>
 
@@ -144,18 +163,18 @@ export default function Home() {
             <span>How I work</span>
           </div>
           <div className="about-body">
-            <h2>Operations discipline.<br />AI-forward thinking.</h2>
+            <h2>Applied GenAI.<br />Production discipline.</h2>
             <p className="about-lead">
-              I&apos;m an IT graduate and software engineer supporting healthcare
-              applications in a regulated enterprise environment. My work spans
-              incident response, observability, SQL validation, release support,
-              and the automations that make those systems easier to run.
+              I build useful GenAI systems with LLM APIs, LangChain, LangGraph,
+              retrieval-augmented generation, vector search, and workflow
+              automation. My focus is turning AI capabilities into products that
+              solve a clear problem—not isolated demos.
             </p>
             <p className="about-copy">
-              Outside daily operations, I build GenAI systems with LLM APIs,
-              LangChain, LangGraph, RAG, vector search, and n8n. That combination
-              lets me approach AI with a production mindset: grounded outputs,
-              visible failure modes, clear escalation paths, and useful outcomes.
+              My enterprise experience supporting regulated healthcare
+              applications adds the operational habits behind that work:
+              observability, grounded outputs, visible failure modes, careful
+              releases, and clear escalation paths.
             </p>
             <div className="focus-grid">
               {focusAreas.map(({ icon: Icon, label, detail }, index) => (
@@ -178,12 +197,12 @@ export default function Home() {
           <div className="section-heading-row">
             <div>
               <p className="section-label">03 / Featured projects</p>
-              <h2>Real products.<br />Real source code.</h2>
+              <h2>Applied AI.<br />Useful software.</h2>
             </div>
             <div className="projects-intro">
               <p className="section-note">
-                A growing collection of shipped products, browser extensions,
-                AI systems, and experiments—each connected to its real repository.
+                Shipped products, AI agents, browser extensions, and focused
+                experiments—each connected to working code or a live experience.
               </p>
               <a className="text-link" href="https://github.com/sharath2525" target="_blank" rel="noreferrer">
                 View all repositories <ArrowUpRight size={16} aria-hidden="true" />
@@ -194,7 +213,13 @@ export default function Home() {
             {projects.map((project) => (
               <article className="project-showcase" key={project.title}>
                 <div className="project-media">
-                  <img src={project.image} alt={`${project.title} interface preview`} loading="lazy" />
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} interface preview`}
+                    width={1600}
+                    height={1000}
+                    sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  />
                   <div className="project-media-shade" />
                   <div className="project-index"><span>{project.number}</span><span>{project.year}</span></div>
                   <span className="project-live-state">{project.status}</span>
@@ -230,7 +255,7 @@ export default function Home() {
           <div className="section-heading-row skills-heading">
             <div>
               <p className="section-label">04 / Toolkit</p>
-              <h2>From signals<br />to shipped systems.</h2>
+              <h2>AI first.<br />Production ready.</h2>
             </div>
             <p className="section-note">A practical stack across AI, automation, backend engineering, data, and production operations.</p>
           </div>
@@ -247,7 +272,7 @@ export default function Home() {
                 <div className="skill-logo-grid">
                   {group.skills.map((skill) => (
                     <div className="skill-logo" key={skill.name}>
-                      <div className="skill-logo-image"><img src={skill.icon} alt="" /></div>
+                      <div className="skill-logo-image"><Image src={skill.icon} alt="" width={27} height={27} /></div>
                       <span>{skill.name}</span>
                     </div>
                   ))}
@@ -314,7 +339,7 @@ export default function Home() {
         <div className="site-shell">
           <p className="section-label">07 / Contact</p>
           <div className="contact-main">
-            <h2>Have a system to<br />improve? Let&apos;s talk.</h2>
+            <h2>Building with AI?<br />Let&apos;s talk.</h2>
             <a className="contact-arrow" href={`mailto:${profile.email}`} aria-label="Email Sharath Chandra">
               <ArrowUpRight size={56} aria-hidden="true" />
             </a>
@@ -323,8 +348,8 @@ export default function Home() {
             <a href={`mailto:${profile.email}`}>
               <Mail size={18} aria-hidden="true" /><span>Email</span><strong>{profile.email}</strong>
             </a>
-            <a href={`tel:${profile.phone.replaceAll(' ', '')}`}>
-              <Phone size={18} aria-hidden="true" /><span>Phone</span><strong>{profile.phone}</strong>
+            <a href={profile.linkedin} target="_blank" rel="noreferrer">
+              <ExternalLink size={18} aria-hidden="true" /><span>LinkedIn</span><strong>Professional profile ↗</strong>
             </a>
             <div>
               <MapPin size={18} aria-hidden="true" /><span>Location</span><strong>{profile.location}</strong>
@@ -335,7 +360,7 @@ export default function Home() {
           </div>
           <div className="footer-bottom">
             <p>© 2026 {profile.name}</p>
-            <div><a href={profile.github}>GitHub ↗</a><a href={profile.linkedin}>LinkedIn ↗</a></div>
+            <div><a href={profile.github} target="_blank" rel="noreferrer">GitHub ↗</a><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
             <a href="#top">Back to top ↑</a>
           </div>
         </div>

@@ -2,9 +2,9 @@ export const profile = {
   name: 'Donthula Sharath Chandra',
   shortName: 'Sharath Chandra',
   role: 'Jr. Software Engineer',
+  targetRole: 'GenAI Engineer & AI Automation Builder',
   location: 'Hyderabad, India',
   email: 'donthulasharath25@gmail.com',
-  phone: '+91 70321 58014',
   github: 'https://github.com/sharath2525',
   linkedin: 'https://linkedin.com/in/d-sharath-chandra',
 };
@@ -92,9 +92,8 @@ export const projects = [
     highlights: ['Wallet integration', 'On-chain payments', 'Mobile-first quiz flow'],
     image: '/projects/iq-quiz.png',
     year: '2026',
-    status: 'Live demo',
+    status: 'Open source',
     links: [
-      { label: 'Live demo', href: 'https://v0-iq-quiz-base-app.vercel.app', type: 'live' },
       { label: 'Source code', href: 'https://github.com/sharath2525/v0-iq-quiz-base-app', type: 'code' },
     ],
   },
@@ -136,8 +135,8 @@ export const skillGroups = [
   },
   {
     number: '04',
-    title: 'Cloud & Operations',
-    description: 'Production support, observability, incident response, and cloud foundations.',
+    title: 'Production Reliability',
+    description: 'Observability, incident response, safe delivery, and cloud foundations for dependable AI systems.',
     skills: [
       { name: 'Linux', icon: '/skills/linux.svg' },
       { name: 'AWS', icon: '/skills/amazonwebservices.svg' },

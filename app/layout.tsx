@@ -1,27 +1,35 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { siteUrl } from './site-config';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site'),
-  title: 'Sharath Chandra — GenAI & Automation Engineer',
+  metadataBase: new URL(siteUrl),
+  title: 'Sharath Chandra | GenAI Engineer & AI Automation Builder',
   description:
-    'Portfolio of Donthula Sharath Chandra, a software engineer building GenAI systems, workflow automation, backend APIs, and dependable production solutions.',
+    'Portfolio of Sharath Chandra, a GenAI engineer building RAG applications, AI agents, LLM-powered tools, workflow automation, and reliable production systems.',
+  keywords: ['GenAI engineer', 'generative AI', 'RAG', 'AI agents', 'LLM applications', 'LangChain', 'LangGraph', 'n8n', 'Python automation'],
+  authors: [{ name: 'Donthula Sharath Chandra', url: siteUrl }],
+  creator: 'Donthula Sharath Chandra',
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: 'Sharath Chandra — GenAI & Automation Engineer',
+    title: 'Sharath Chandra | GenAI Engineer & AI Automation Builder',
     description:
-      'GenAI systems, workflow automation, backend APIs, and dependable production engineering.',
+      'Applied GenAI products, RAG applications, AI agents, workflow automation, and production reliability.',
     type: 'website',
+    url: siteUrl,
+    siteName: 'Sharath Chandra — GenAI Portfolio',
     images: [{ url: '/og.png', width: 1672, height: 941, alt: 'Sharath Chandra — GenAI, Automation, Software Engineering' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sharath Chandra — GenAI & Automation Engineer',
+    title: 'Sharath Chandra | GenAI Engineer & AI Automation Builder',
     description:
-      'GenAI systems, workflow automation, backend APIs, and dependable production engineering.',
+      'Applied GenAI products, RAG applications, AI agents, workflow automation, and production reliability.',
     images: ['/og.png'],
   },
 };
