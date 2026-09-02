@@ -49,10 +49,10 @@ const structuredProfile = {
   url: siteUrl,
   email: `mailto:${profile.email}`,
   jobTitle: profile.role,
-  description: `${profile.role} building toward ${profile.targetRole} roles through applied AI products and production engineering.`,
+  description: `${profile.role} building ${profile.targetRole} solutions and pursuing related AI engineering roles.`,
   address: { '@type': 'PostalAddress', addressLocality: 'Hyderabad', addressCountry: 'IN' },
   sameAs: [profile.github, profile.linkedin],
-  knowsAbout: ['Generative AI', 'Retrieval-Augmented Generation', 'AI agents', 'LLM APIs', 'Python', 'n8n', 'Production reliability'],
+  knowsAbout: ['Generative AI', 'Retrieval-Augmented Generation', 'AI agents', 'LLM applications', 'Prompt engineering', 'LLM evaluation', 'Python', 'n8n', 'Production reliability'],
 };
 
 export default function Home() {
@@ -76,7 +76,7 @@ export default function Home() {
             <a href="#contact">Contact</a>
           </div>
           <a className="availability" href={`mailto:${profile.email}`}>
-            <span aria-hidden="true" /> Open to GenAI roles
+            <span aria-hidden="true" /> Open to AI / GenAI roles
           </a>
         </nav>
 
@@ -89,7 +89,7 @@ export default function Home() {
               Chandra<span className="accent-mark">↗</span>
             </h1>
             <p className="hero-role">
-              GenAI Engineer · AI Automation Builder
+              Software Engineer · Applied GenAI & AI Automation
             </p>
             <p className="hero-intro">
               I build applied GenAI products—RAG assistants, agentic workflows,

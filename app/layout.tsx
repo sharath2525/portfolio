@@ -8,26 +8,26 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Sharath Chandra | GenAI Engineer & AI Automation Builder',
+  title: 'Sharath Chandra | Software Engineer — Applied GenAI & AI Automation',
   description:
-    'Portfolio of Sharath Chandra, a GenAI engineer building RAG applications, AI agents, LLM-powered tools, workflow automation, and reliable production systems.',
-  keywords: ['GenAI engineer', 'generative AI', 'RAG', 'AI agents', 'LLM applications', 'LangChain', 'LangGraph', 'n8n', 'Python automation'],
+    'Portfolio of Sharath Chandra, a software engineer building applied GenAI products, RAG applications, AI agents, LLM-powered tools, workflow automation, and reliable production systems.',
+  keywords: ['software engineer', 'GenAI engineer', 'applied AI engineer', 'AI automation engineer', 'LLM application engineer', 'LLM evaluation', 'prompt engineering', 'generative AI', 'RAG', 'AI agents', 'LangChain', 'LangGraph', 'n8n', 'Python automation'],
   authors: [{ name: 'Donthula Sharath Chandra', url: siteUrl }],
   creator: 'Donthula Sharath Chandra',
   alternates: { canonical: '/' },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'Sharath Chandra | GenAI Engineer & AI Automation Builder',
+    title: 'Sharath Chandra | Software Engineer — Applied GenAI & AI Automation',
     description:
       'Applied GenAI products, RAG applications, AI agents, workflow automation, and production reliability.',
     type: 'website',
     url: siteUrl,
-    siteName: 'Sharath Chandra — GenAI Portfolio',
+    siteName: 'Sharath Chandra — Applied GenAI Portfolio',
     images: [{ url: '/og.png', width: 1672, height: 941, alt: 'Sharath Chandra — GenAI, Automation, Software Engineering' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sharath Chandra | GenAI Engineer & AI Automation Builder',
+    title: 'Sharath Chandra | Software Engineer — Applied GenAI & AI Automation',
     description:
       'Applied GenAI products, RAG applications, AI agents, workflow automation, and production reliability.',
     images: ['/og.png'],

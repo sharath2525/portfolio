@@ -1,6 +1,6 @@
 # Donthula Sharath Chandra
 
-### Software Engineer | GenAI Engineer & AI Automation Builder
+### Software Engineer | Applied GenAI, LLM Applications & AI Automation
 
 [LinkedIn](https://linkedin.com/in/d-sharath-chandra) · [GitHub](https://github.com/sharath2525) · [Email](mailto:donthulasharath25@gmail.com)
 
@@ -96,7 +96,7 @@ IEEE ADICS International Conference · 2024
 
 ## Current direction
 
-I am interested in opportunities as a **GenAI Engineer**, **AI Automation Engineer**, or **Applied AI Engineer**, where I can build useful AI systems and help operate them reliably in production.
+I am open to opportunities as a **GenAI Engineer**, **Applied AI Engineer**, **LLM Application Engineer**, **AI Automation Engineer**, or in **Prompt and LLM Evaluation** roles where I can build useful AI systems and help operate them reliably in production.
 
 ## Contact
 

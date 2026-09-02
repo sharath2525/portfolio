@@ -2,7 +2,7 @@ export const profile = {
   name: 'Donthula Sharath Chandra',
   shortName: 'Sharath Chandra',
   role: 'Jr. Software Engineer',
-  targetRole: 'GenAI Engineer & AI Automation Builder',
+  targetRole: 'Applied GenAI, LLM Applications & AI Automation',
   location: 'Hyderabad, India',
   email: 'donthulasharath25@gmail.com',
   github: 'https://github.com/sharath2525',

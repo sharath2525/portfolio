@@ -47,6 +47,10 @@ Thumbs.db
 .netrc
 .npmrc.local
 
+# private local documentation
+/LOCAL.md
+/LOCAL-DEPLOYMENT.md
+
 # deployment and generated files
 .vercel/
 next-env.d.ts
@@ -57,5 +61,3 @@ next-env.d.ts
 /outputs/
 /work/
 /tmp/
-
-.vercel
