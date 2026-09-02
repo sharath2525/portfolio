@@ -4,7 +4,7 @@
 
 This repository contains the source for Sharath Chandra's personal portfolio.
 
-Live website: [sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site](https://sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site)
+Production website: add your final Vercel or custom-domain URL here after deployment.
 
 The site uses React, TypeScript, Vinext, and CSS. Most normal content updates do **not** require editing the page layout. Personal information, projects, skills, experience, education, and publication data are kept together in `app/content.ts`.
 
@@ -486,11 +486,9 @@ After editing, run:
 npm run build
 ```
 
-Then push the update to GitHub for an automatic Vercel deployment, or ask Codex to publish the updated portfolio. A useful request is:
+Then push the update to GitHub for an automatic Vercel deployment.
 
-> Update my existing portfolio from the current files, verify all checks, and publish it through the connected production host.
-
-For a new project, you can provide Codex with:
+For a new project, prepare:
 
 - GitHub repository URL
 - Live website URL, if available
@@ -498,7 +496,7 @@ For a new project, you can provide Codex with:
 - Preferred project name and status
 - Any features you particularly want highlighted
 
-Codex can then add the project using the existing equal-size card system and publish it.
+Add the project using the existing equal-size card system, verify it locally, and publish it through your normal GitHub and Vercel workflow.
 
 ## Repository structure
 

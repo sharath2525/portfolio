@@ -2,7 +2,7 @@
 
 ### Software Engineer | GenAI Engineer & AI Automation Builder
 
-[Portfolio](https://sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site) · [LinkedIn](https://linkedin.com/in/d-sharath-chandra) · [GitHub](https://github.com/sharath2525) · [Email](mailto:donthulasharath25@gmail.com)
+[LinkedIn](https://linkedin.com/in/d-sharath-chandra) · [GitHub](https://github.com/sharath2525) · [Email](mailto:donthulasharath25@gmail.com)
 
 ![Sharath Chandra's GenAI engineering portfolio](public/og.png)
 
@@ -103,4 +103,3 @@ I am interested in opportunities as a **GenAI Engineer**, **AI Automation Engine
 - Email: [donthulasharath25@gmail.com](mailto:donthulasharath25@gmail.com)
 - LinkedIn: [linkedin.com/in/d-sharath-chandra](https://linkedin.com/in/d-sharath-chandra)
 - GitHub: [github.com/sharath2525](https://github.com/sharath2525)
-- Portfolio: [View my portfolio](https://sharath-chandra-portfolio.sharathprvtairdrops.chatgpt.site)
