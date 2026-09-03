@@ -11,12 +11,12 @@ export const profile = {
 
 // ADDING A PROJECT
 // 1. Copy one complete object inside this array.
-// 2. Change its number, title, text, image, stack, highlights, status, and links.
+// 2. Change its title, text, image, stack, highlights, status, and links.
 // 3. Save the project screenshot inside public/projects and use its path below.
-// Every project automatically uses the same responsive card size—no layout setting is needed.
+// 4. Move complete objects up or down to change the display order.
+// 5. Adjust imagePosition when the important part of a screenshot is not centered.
 export const projects = [
   {
-    number: '01',
     title: 'IPO Fast Check',
     label: 'Fintech Utility',
     tagline: 'One IPO. One PAN. Quick allotment result.',
@@ -25,6 +25,7 @@ export const projects = [
     stack: ['Next.js', 'TypeScript', 'Cheerio', 'Server APIs', 'Vercel'],
     highlights: ['Live IPO data', 'Privacy-first PAN flow', 'Registrar fallbacks'],
     image: '/projects/ipoinfo.png',
+    imagePosition: 'center 28%',
     year: '2026',
     status: 'Live product',
     links: [
@@ -33,7 +34,6 @@ export const projects = [
     ],
   },
   {
-    number: '02',
     title: 'Claude Limit Guard',
     label: 'Browser Extension',
     tagline: 'Usage limits, exactly where they matter.',
@@ -42,6 +42,7 @@ export const projects = [
     stack: ['JavaScript', 'Manifest V3', 'Claude API', 'Chrome', 'Edge'],
     highlights: ['Zero permissions', 'No tracking', 'Live reset countdown'],
     image: '/projects/claude-limit-guard.png',
+    imagePosition: 'center 52%',
     year: '2026',
     status: 'Chrome Web Store',
     links: [
@@ -50,7 +51,6 @@ export const projects = [
     ],
   },
   {
-    number: '03',
     title: 'AI Context Capsule',
     label: 'AI Productivity Extension',
     tagline: 'Carry useful context between AI conversations.',
@@ -59,6 +59,7 @@ export const projects = [
     stack: ['JavaScript', 'Manifest V3', 'LLM APIs', 'Chrome Storage', 'PDF Export'],
     highlights: ['Raw + smart capsules', 'Multi-provider APIs', 'Context injection'],
     image: '/projects/ai-context-capsule.png',
+    imagePosition: 'center center',
     year: '2026',
     status: 'Open source',
     links: [
@@ -66,7 +67,6 @@ export const projects = [
     ],
   },
   {
-    number: '04',
     title: 'Hyperliquid AI Trading Agent',
     label: 'Agentic Market System',
     tagline: 'Code-first signals with an AI analysis gate.',
@@ -75,6 +75,7 @@ export const projects = [
     stack: ['Python', 'Claude', 'Hyperliquid', 'Technical Analysis', 'Risk Controls'],
     highlights: ['Multi-timeframe signals', 'Fail-closed AI gate', 'Eight risk guards'],
     image: '/projects/trading-bot-architecture.png',
+    imagePosition: 'center center',
     year: '2026',
     status: 'Open source',
     links: [
@@ -82,7 +83,6 @@ export const projects = [
     ],
   },
   {
-    number: '05',
     title: 'IQ Quiz Contest',
     label: 'Base Mini App',
     tagline: 'Timed logic challenges with on-chain access.',
@@ -91,10 +91,28 @@ export const projects = [
     stack: ['Next.js', 'TypeScript', 'Base', 'Farcaster', 'Wagmi'],
     highlights: ['Wallet integration', 'On-chain payments', 'Mobile-first quiz flow'],
     image: '/projects/iq-quiz.png',
+    imagePosition: 'center 22%',
     year: '2026',
     status: 'Open source',
     links: [
       { label: 'Source code', href: 'https://github.com/sharath2525/v0-iq-quiz-base-app', type: 'code' },
+    ],
+  },
+  {
+    title: 'Sharath Chandra Portfolio',
+    label: 'Portfolio Platform',
+    tagline: 'A focused home for my engineering work.',
+    description:
+      'A responsive, data-driven portfolio presenting applied GenAI projects, production experience, technical skills, and clear paths for recruiters to explore my work.',
+    stack: ['Next.js', 'TypeScript', 'Vinext', 'Vercel', 'Responsive UI'],
+    highlights: ['Data-driven content', 'Responsive project grid', 'SEO-ready metadata'],
+    image: '/og.png',
+    imagePosition: 'center center',
+    year: '2026',
+    status: 'Live website',
+    links: [
+      { label: 'Live website', href: 'https://sharathchandra.co.in', type: 'live' },
+      { label: 'Source code', href: 'https://github.com/sharath2525/portfolio', type: 'code' },
     ],
   },
 ] as const;

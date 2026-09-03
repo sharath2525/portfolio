@@ -42,6 +42,45 @@ const heroTechnologies = [
   { name: 'Docker', icon: '/skills/docker.svg' },
 ];
 
+type Project = (typeof projects)[number];
+
+function ProjectCard({ project, index }: { project: Project; index: number }) {
+  return (
+    <article className="project-showcase">
+      <div className="project-media">
+        <Image
+          src={project.image}
+          alt={`${project.title} interface preview`}
+          width={1600}
+          height={1000}
+          sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, (max-width: 1240px) 33vw, 25vw"
+          style={{ objectPosition: project.imagePosition }}
+        />
+        <div className="project-media-shade" />
+        <div className="project-index"><span>{String(index + 1).padStart(2, '0')}</span><span>{project.year}</span></div>
+        <span className="project-live-state">{project.status}</span>
+      </div>
+      <div className="project-info">
+        <p className="project-label"><FolderKanban size={14} aria-hidden="true" /> {project.label}</p>
+        <h3>{project.title}</h3>
+        <p className="project-tagline">{project.tagline}</p>
+        <p className="project-description">{project.description}</p>
+        <ul className="tag-list" aria-label={`${project.title} technologies`}>
+          {project.stack.slice(0, 4).map((item) => <li key={item}>{item}</li>)}
+        </ul>
+        <div className="project-actions">
+          {project.links.map((link) => (
+            <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
+              {link.type === 'code' ? <Code2 size={15} aria-hidden="true" /> : <ExternalLink size={15} aria-hidden="true" />}
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </article>
+  );
+}
+
 const structuredProfile = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -144,7 +183,7 @@ export default function Home() {
 
         <div className="hero-footer" aria-label="Highlights">
           <p><strong>03</strong> Applied AI products</p>
-          <p><strong>05</strong> Featured builds</p>
+          <p><strong>{String(projects.length).padStart(2, '0')}</strong> Selected builds</p>
           <p><strong>01+</strong> Years in enterprise software</p>
         </div>
       </header>
@@ -196,7 +235,7 @@ export default function Home() {
         <div className="site-shell">
           <div className="section-heading-row">
             <div>
-              <p className="section-label">03 / Featured projects</p>
+              <p className="section-label">03 / Selected projects</p>
               <h2>Applied AI.<br />Useful software.</h2>
             </div>
             <div className="projects-intro">
@@ -210,41 +249,8 @@ export default function Home() {
             </div>
           </div>
           <div className="projects-bento">
-            {projects.map((project) => (
-              <article className="project-showcase" key={project.title}>
-                <div className="project-media">
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} interface preview`}
-                    width={1600}
-                    height={1000}
-                    sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw"
-                  />
-                  <div className="project-media-shade" />
-                  <div className="project-index"><span>{project.number}</span><span>{project.year}</span></div>
-                  <span className="project-live-state">{project.status}</span>
-                </div>
-                <div className="project-info">
-                  <p className="project-label"><FolderKanban size={15} aria-hidden="true" /> {project.label}</p>
-                  <h3>{project.title}</h3>
-                  <p className="project-tagline">{project.tagline}</p>
-                  <p className="project-description">{project.description}</p>
-                  <ul className="project-highlights" aria-label={`${project.title} highlights`}>
-                    {project.highlights.map((item) => <li key={item}>{item}</li>)}
-                  </ul>
-                  <ul className="tag-list" aria-label={`${project.title} technologies`}>
-                    {project.stack.map((item) => <li key={item}>{item}</li>)}
-                  </ul>
-                  <div className="project-actions">
-                    {project.links.map((link) => (
-                      <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
-                        {link.type === 'code' ? <Code2 size={16} aria-hidden="true" /> : <ExternalLink size={16} aria-hidden="true" />}
-                        {link.label}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </article>
+            {projects.map((project, index) => (
+              <ProjectCard project={project} index={index} key={project.title} />
             ))}
           </div>
         </div>
