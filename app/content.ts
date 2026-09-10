@@ -17,6 +17,40 @@ export const profile = {
 // 5. Adjust imagePosition when the important part of a screenshot is not centered.
 export const projects = [
   {
+    title: 'Agent Invoice',
+    label: 'Self-Funding AI Agent',
+    tagline: 'Market intelligence that earns and reinvests.',
+    description:
+      'A Binance Agent OS project that generates live multi-signal market reports, gates access through x402 USDC payments, verifies settlement on-chain, and reinvests earnings through Binance MCP.',
+    stack: ['Node.js', 'Express', 'Binance MCP', 'x402', 'Ethers.js'],
+    highlights: ['Five-signal market analysis', 'On-chain USDC verification', 'Autonomous reinvestment loop'],
+    image: '/projects/agent-invoice.png',
+    imagePosition: 'center 48%',
+    year: '2026',
+    status: 'Live demo',
+    links: [
+      { label: 'Live website', href: 'https://self-funding-ai-agent.vercel.app/', type: 'live' },
+      { label: 'Source code', href: 'https://github.com/sharath2525/BinanceAiAgent', type: 'code' },
+    ],
+  },
+  {
+    title: 'DevSnapshot',
+    label: 'Windows Desktop Utility',
+    tagline: 'Checkpoint your project before AI changes it.',
+    description:
+      'A private, offline Windows app that creates complete, integrity-verified ZIP snapshots of development projects before AI coding sessions, refactors, dependency upgrades, or migrations.',
+    stack: ['Python', 'PySide6', 'PyInstaller', 'Windows', 'GitHub Actions'],
+    highlights: ['Integrity-verified ZIPs', 'Private and offline', 'Microsoft Store release'],
+    image: '/projects/devsnapshot.png',
+    imagePosition: 'center 32%',
+    year: '2026',
+    status: 'Microsoft Store',
+    links: [
+      { label: 'Microsoft Store', href: 'https://apps.microsoft.com/detail/9PJC014G01TN?hl=en-us&gl=IE&ocid=pdpshare', type: 'live' },
+      { label: 'Source code', href: 'https://github.com/sharath2525/DevSnapshot', type: 'code' },
+    ],
+  },
+  {
     title: 'IPO Fast Check',
     label: 'Fintech Utility',
     tagline: 'One IPO. One PAN. Quick allotment result.',
